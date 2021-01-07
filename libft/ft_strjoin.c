@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychung <ychung@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 11:59:19 by ychung            #+#    #+#             */
-/*   Updated: 2021/01/07 22:51:06 by ychung           ###   ########.fr       */
+/*   Created: 2021/01/06 00:10:11 by ychung            #+#    #+#             */
+/*   Updated: 2021/01/06 00:46:05 by ychung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char *usrc;
-	unsigned char *udst;
-	unsigned char temp[len];
+	char	*new_s;
+	size_t	s1_len;
+	size_t	s2_len;
 
-	if (!dst && !src)
+	if (!s1 && !s2)
 		return (0);
-	usrc = (unsigned char *)src;
-	udst = (unsigned char *)dst;
-	ft_memcpy(temp, usrc, len);
-	ft_memcpy(udst, temp, len);
-	return (dst);
+	else if (!s1 || !s2)
+		return (!s1 ? (char*)s2 : (char*)s1);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	new_s = (char*)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!new_s)
+		return (0);
+	ft_memcpy(new_s, s1, s1_len);
+	ft_memcpy(new_s + s1_len, s2, s2_len);
+	new_s[s1_len + s2_len] = 0;
+	return (new_s);
 }

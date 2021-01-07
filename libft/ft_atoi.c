@@ -6,7 +6,7 @@
 /*   By: ychung <ychung@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 18:17:15 by ychung            #+#    #+#             */
-/*   Updated: 2020/12/24 18:54:02 by ychung           ###   ########.fr       */
+/*   Updated: 2021/01/05 14:19:07 by ychung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
+	long	res;
+	long	sign;
 	size_t	i;
-	int		res;
-	int		sign;
 
 	res = 0;
 	sign = 1;
@@ -34,14 +34,4 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	return (sign * res);
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-	char s[] = "--2147483647";
-	int num = ft_atoi(s);
-	printf("res : %d\n", num);
-	return (0);
 }

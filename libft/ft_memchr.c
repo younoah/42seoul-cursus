@@ -6,12 +6,11 @@
 /*   By: ychung <ychung@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 12:54:59 by ychung            #+#    #+#             */
-/*   Updated: 2020/12/22 13:03:15 by ychung           ###   ########.fr       */
+/*   Updated: 2021/01/04 18:29:04 by ychung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(void *ptr, int value, size_t n)
 {
@@ -29,20 +28,4 @@ void	*ft_memchr(void *ptr, int value, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-int main() {
-	char* pch;
-	char str[] = "Example string";
-	pch = (char*)ft_memchr(str, 'p', strlen(str));
-
-	if (pch != NULL)
-	{
-		printf("'p' found at position %ld.\n", pch - str + 1);
-		printf("pch : %p  str : %p\n", pch, str);
-	}
-	else
-		printf("'p' not found.\n");
-
-	return 0;
 }
