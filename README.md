@@ -8,7 +8,7 @@
 
 | Circle | Project                  | Language | Topics                             | Date of Completion |
 | :----: | :----------------------- | :------: | :--------------------------------- | :----------------: |
-|   1    | [**Libft**](./libft)     |    C     | `library` `Makefile` `linked list` |   2021. 01. 07.    |
-|   2    | [**netwhat**](./netwhat) |    -     | `network` `OSI protocols` `TCP/IP` |                    |
+|   0    | [**Libft**](./libft)     |    C     | `library` `Makefile` `linked list` |   2021. 01. 07.    |
+|   1    | [**netwhat**](./netwhat) |    -     | `network` `OSI protocols` `TCP/IP` |                    |
 |        |                          |          |                                    |                    |
 
